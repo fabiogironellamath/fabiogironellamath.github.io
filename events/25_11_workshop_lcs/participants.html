@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Participants</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
+            color: #222;
+        }
+
+        /* Main Content Container */
+        .content-container {
+            max-width: 1100px; /* Wider for larger screens */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #222;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th,
+        table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        table th {
+            font-weight: 600;
+            background-color: #f5f5f5;
+            color: #222;
+        }
+
+        table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* Style for the index column */
+        table th:first-child,
+        table td:first-child {
+            width: 50px;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1200px) {
+            .content-container {
+                max-width: 1300px; /* Wider for very large screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            table th,
+            table td {
+                padding: 8px;
+            }
+        }
+    </style>
+    <!-- Load Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>List of Participants</h1>
+    </header>
+
+    <div class="content-container">
+        <table id="participant-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Surname</th>
+                    <th>First Name</th>
+                    <th>Affiliation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Participants will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Function to load and parse the CSV file
+        function loadParticipants() {
+            fetch('participants.csv')
+                .then(response => response.text())
+                .then(data => {
+                    const rows = data.split('\n').slice(1); // Skip the header row
+                    const tableBody = document.querySelector('#participant-table tbody');
+
+                    rows.forEach((row, index) => {
+                        if (row.trim() === '') return; // Skip empty rows
+                        const [familyName, firstName, affiliation] = row.split(',');
+
+                        const tableRow = document.createElement('tr');
+                        tableRow.innerHTML = `
+                            <td>${index + 1}</td>
+                            <td>${familyName}</td>
+                            <td>${firstName}</td>
+                            <td>${affiliation}</td>
+                        `;
+                        tableBody.appendChild(tableRow);
+                    });
+                })
+                .catch(error => console.error('Error loading participants:', error));
+        }
+
+        // Load participants when the page loads
+        window.onload = loadParticipants;
+    </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Talks: Titles and Abstracts</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
+            color: #222;
+        }
+
+        /* Sections */
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #222;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Talk Cards */
+        .talk {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .talk h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .talk h4 {
+            margin: 0 0 10px 0;
+            font-size: 1em;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .talk p {
+            margin: 0 0 15px 0;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .talk ul {
+            margin: 0 0 15px 0;
+            padding-left: 20px;
+        }
+
+        .talk ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        /* MathML Styling */
+        math {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Acknowledgements */
+        .acknowledgements {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .acknowledgements img {
+            max-width: 100px;
+            margin-right: 10px;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1200px) {
+            section {
+                max-width: 1100px;
+                /* Increase max-width for larger screens */
+            }
+        }
+
+        @media (min-width: 1600px) {
+            section {
+                max-width: 1400px;
+                /* Further increase max-width for very large screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .talk h3 {
+                font-size: 1.2em;
+            }
+
+            .talk p {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+    <script>
+        window.MathJax = {
+            tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+            svg: {fontCache: 'global'}
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Titles and Abstracts</h1>
+    </header>
+
+
+
+    
+
+    <section>
+        <h2>Talks 1 and 3 by Fabio Gironella and Baptiste Chantraine</h2>
+        <div class="talk">
+            <h3>General introduction, and an existence result for 1-periodic orbits on blowups of some LCS-ifications I (Fabio Gironella)</h3>
+            <h3>An existence result for 1-periodic orbits on blowups of some LCS-ifications II (Baptiste Chaintraine)</h3>
+            <p>After a general introduction recalling necessary definitions and notions to kickstart the workshop, we will present a work in progress 
+                that is aimed at giving lower bounds on the number of 1-periodic orbits of a class of Hamiltonians on blown-up LCS-ifications of hypertight 
+                contact manifolds in terms of Novikov homology, using Hamiltonian Floer theory.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Talks 2, 4 and 5 by Mélanie Bertelson, Margherita Sheila Sandon, Pranav Chakravarthy</h2>
+        <div class="talk">
+            <h3>Non-squeezing and other global rigidity results in lcs geometry I (Mélanie
+            Bertelson)</h3>
+            <h3>Non-squeezing and other global rigidity results in lcs geometry II (Margherita
+            Sheila Sandon)</h3>
+            <h3>Non-squeezing and other global rigidity results in lcs geometry III (Pranav Chakravarthy)</h3>
+            <p>
+Using generating functions quadratic at infinity for Lagrangian submanifolds of twisted cotangent bundles, we define spectral selectors for compactly supported lcs Hamiltonian diffeomorphisms of the locally conformal symplectizations 
+\( S^1 \times \mathbb{R}^{2n+1} \) and \( S^1 \times \mathbb{R}^{2n} \times S^1 \) 
+of \( \mathbb{R}^{2n+1} \) and \( \mathbb{R}^{2n} \times S^1 \), and obtain several applications: the construction of a bi-invariant partial order on the group of compactly supported lcs Hamiltonian diffeomorphisms of 
+\( S^1 \times \mathbb{R}^{2n+1} \) and \( S^1 \times \mathbb{R}^{2n} \times S^1 \), 
+of an integer-valued bi-invariant metric on the group of compactly supported lcs Hamiltonian diffeomorphisms of 
+\( S^1 \times \mathbb{R}^{2n} \times S^1 \), 
+and of an integer-valued lcs capacity for domains of 
+\( S^1 \times \mathbb{R}^{2n} \times S^1 \). 
+The lcs capacity is used to prove a lcs non-squeezing theorem in 
+\( S^1 \times \mathbb{R}^{2n} \times S^1 \) 
+analogous to the contact non-squeezing theorem in 
+\( \mathbb{R}^{2n} \times S^1 \) 
+discovered in 2006 by Eliashberg, Kim and Polterovich. 
+Along the way we introduce for Liouville lcs manifolds the notions of essential Lee chords between exact Lagrangian submanifolds and of essential translated points of exact lcs diffeomorphisms. 
+We prove that essential translated points always exist for time-\(1\) maps of sufficiently \(\mathcal{C}^0\)-small lcs Hamiltonian isotopies of compact Liouville lcs manifolds and for all compactly supported lcs Hamiltonian diffeomorphisms of 
+\( S^1 \times \mathbb{R}^{2n+1} \) and \( S^1 \times \mathbb{R}^{2n} \times S^1 \). 
+We also obtain an existence result for essential Lee chords between the zero section of a twisted cotangent bundle with compact base and its image by any lcs Hamiltonian isotopy, which can be thought of as a lcs analogue of the Lagrangian and Legendrian Arnold conjectures on usual cotangent and \(1\)-jet bundles. 
+Finally, we introduce the notion of orderability for lcs manifolds, and prove that 
+\( S^1 \times \mathbb{R}^{2n+1} \), \( S^1 \times \mathbb{R}^{2n} \times S^1 \) 
+and twisted cotangent bundles are orderable.
+</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Talk 6 by Pacôme Van Overschelde</h2>
+        <div class="talk">
+            <h3>From Liouville Cobordisms to LCS Manifolds</h3>
+            <p>In dimensions greater than four, the classification of smooth manifolds is an unsolvable problem, but manifolds can still be classified up to cobordism. 
+
+                From this perspective, Liouville cobordisms provide a powerful tool for studying contact manifolds in high dimensions.
+                In this talk, I will explain how Liouville cobordisms can be used to construct exact locally conformally symplectic (LCS) manifolds, in particular the LCS mapping tori associated with a contactomorphism.
+                I will then use this construction to study the isomorphism classes of LCS mapping tori and explore their connections with the contact mapping class group.
+            </p>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
