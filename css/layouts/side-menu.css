@@ -252,3 +252,64 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         left: 150px;
     }
 }
+
+
+
+/* -- Footnotes (Matched to Pure.css Side-Menu Theme) ---------------------- */
+
+/* Smooth scrolling when jumping between text and footnotes */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Keep superscript numbers neat without breaking line-height: 1.6em */
+sup {
+    line-height: 0;
+    font-size: 0.75em;
+}
+
+sup a {
+    color: #1f8dd6; /* Matches your active menu accent color */
+    text-decoration: none;
+    padding: 0 2px;
+}
+
+sup a:hover,
+sup a:focus {
+    text-decoration: underline;
+}
+
+/* Match the .header border (#eee) and body text (#777) */
+.content footer {
+    margin-top: 3em;
+    padding-top: 1.5em;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.content footer ol {
+    padding-left: 1.5em;
+    margin: 0;
+}
+
+.content footer li {
+    margin-bottom: 0.75em;
+}
+
+.content footer li a {
+    color: #1f8dd6;
+    text-decoration: none;
+}
+
+.content footer li a:hover {
+    text-decoration: underline;
+}
+
+/* Subtle cool-blue highlight that blends with #1f8dd6 instead of yellow */
+:target {
+    background-color: rgba(31, 141, 214, 0.12);
+    padding: 2px 6px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
